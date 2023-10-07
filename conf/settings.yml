@@ -1,0 +1,35 @@
+app:
+  dev:true
+
+server:
+  port: 8090
+
+db:
+  dns: root:root@tcp(127.0.0.1:3306)/basic?charset=utf8mb4&parseTime=True&loc=Local
+  username: root
+  password: root
+  host: mysql
+  port: 3306
+  database: basic
+  singular: true
+  prefix:
+  maxIdleConn: 100
+  maxOpenConn: 100
+
+redis:
+  addr: 127.0.0.1:6379
+  password:
+  db: 0
+
+jwt:
+    expiresAt: 172800 # token 时长秒
+    secretKey: test # 签名 key
+
+
+logger:
+  maxSize: 5  # 日志文件最大的尺寸(M),超出后自动分割
+  maxBackups: 10 # 保留旧文件的最大个数
+  maxAge: 90 # 保留旧文件的最大天数
+  compress: false
+
+
